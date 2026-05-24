@@ -80,7 +80,7 @@ public class SleepTrackerAppTest {
     void testAverageSessionOneSession() {
         sessions = new ArrayList<>(List.of(s1));
         SleepAnalysisResult actual = new AverageSession().apply(sessions);
-        SleepAnalysisResult expected = new SleepAnalysisResult("Средняя продолжительность сессии", "495,00");
+        SleepAnalysisResult expected = new SleepAnalysisResult("Средняя продолжительность сессии", "495.00");
         assertEquals(expected.toString(), actual.toString());
     }
 
@@ -88,7 +88,7 @@ public class SleepTrackerAppTest {
     void testAverageSessionSeveralSessions() {
         sessions = new ArrayList<>(List.of(s1, s2, s3));
         SleepAnalysisResult actual = new AverageSession().apply(sessions);
-        SleepAnalysisResult expected = new SleepAnalysisResult("Средняя продолжительность сессии", "346,67");
+        SleepAnalysisResult expected = new SleepAnalysisResult("Средняя продолжительность сессии", "346.67");
         assertEquals(expected.toString(), actual.toString());
     }
 
