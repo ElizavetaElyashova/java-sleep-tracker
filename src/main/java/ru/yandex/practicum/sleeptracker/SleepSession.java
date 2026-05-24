@@ -11,12 +11,12 @@ public class SleepSession {
     LocalDateTime sleepFinish;
     SleepQuality sleepQuality;
     Chronotype chronotype;
-    final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yy HH:mm");
+    final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yy HH:mm");
 
     public SleepSession(String session) {
         String[] sessionData = session.split(";");
-        sleepStart = LocalDateTime.parse(sessionData[0], FORMATTER);
-        sleepFinish = LocalDateTime.parse(sessionData[1], FORMATTER);
+        sleepStart = LocalDateTime.parse(sessionData[0], DATE_TIME_FORMATTER);
+        sleepFinish = LocalDateTime.parse(sessionData[1], DATE_TIME_FORMATTER);
         sleepQuality = SleepQuality.valueOf(sessionData[2]);
         chronotype = defineChronotype();
     }
@@ -58,7 +58,7 @@ public class SleepSession {
 
     @Override
     public String toString() {
-        return String.format("%s; %s; %s %s\n", sleepStart.format(FORMATTER), sleepFinish.format(FORMATTER),
+        return String.format("%s; %s; %s %s\n", sleepStart.format(DATE_TIME_FORMATTER), sleepFinish.format(DATE_TIME_FORMATTER),
                 sleepQuality, chronotype);
     }
 
