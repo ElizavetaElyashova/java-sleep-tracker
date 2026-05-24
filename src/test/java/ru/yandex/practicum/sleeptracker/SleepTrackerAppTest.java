@@ -19,7 +19,7 @@ public class SleepTrackerAppTest {
     static SleepSession s6;
 
     @BeforeAll
-    static void BeforeAll() {
+    static void beforeAll() {
         s1 = new SleepSession("02.10.25 01:15;02.10.25 09:30;GOOD"); //сова
         s2 = new SleepSession("02.10.25 23:50;03.10.25 08:05;NORMAL"); //голубь
         s3 = new SleepSession("03.10.25 23:10;04.10.25 00:00;NORMAL"); //голубь
