@@ -15,7 +15,7 @@ public class SleeplessNights implements Function<List<SleepSession>, SleepAnalys
                 .filter(session -> session.getSleepFinish().toLocalDate().isAfter(session.getSleepStart().toLocalDate())
                         || (session.getSleepStart().toLocalTime().isAfter(LocalTime.of(0, 0)) &&
                         session.getSleepStart().toLocalTime().isBefore(LocalTime.of(6, 0))))
-                .map(session -> session.getSleepStart().toLocalDate())
+                .map(session -> session.getSleepFinish().toLocalDate())
                 .distinct()
                 .count();
         long allNights = Period.between(sessions.getFirst().getSleepStart().toLocalDate(),
