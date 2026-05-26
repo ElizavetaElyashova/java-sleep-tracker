@@ -1,7 +1,18 @@
 package ru.yandex.practicum.sleeptracker;
 
 public enum Chronotype {
-    Сова,
-    Голубь,
-    Жаворонок
+    OWL("Сова"),
+    DOVE("Голубь"),
+    LARK("Жаворонок");
+
+    private final String rus;
+
+    Chronotype(String s) {
+        rus = s;
+    }
+
+    @Override
+    public String toString() {
+        return rus;
+    }
 }
