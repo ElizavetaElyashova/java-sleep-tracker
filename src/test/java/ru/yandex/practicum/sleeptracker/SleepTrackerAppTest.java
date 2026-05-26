@@ -112,7 +112,7 @@ public class SleepTrackerAppTest {
     void testUserChronotypeIsClear() {
         sessions = new ArrayList<>(List.of(s1, s2, s4, s5));
         SleepAnalysisResult actual = new UserChronotype().apply(sessions);
-        SleepAnalysisResult expected = new SleepAnalysisResult("Хронотип пользователя", Chronotype.Сова.toString());
+        SleepAnalysisResult expected = new SleepAnalysisResult("Хронотип пользователя", Chronotype.OWL.toString());
         assertEquals(expected.toString(), actual.toString());
     }
 
@@ -120,7 +120,7 @@ public class SleepTrackerAppTest {
     void testUserChronotypeIsUnclear() {
         sessions = new ArrayList<>(List.of(s1, s2, s3, s4, s5));
         SleepAnalysisResult actual = new UserChronotype().apply(sessions);
-        SleepAnalysisResult expected = new SleepAnalysisResult("Хронотип пользователя", Chronotype.Голубь.toString());
+        SleepAnalysisResult expected = new SleepAnalysisResult("Хронотип пользователя", Chronotype.DOVE.toString());
         assertEquals(expected.toString(), actual.toString());
     }
 
