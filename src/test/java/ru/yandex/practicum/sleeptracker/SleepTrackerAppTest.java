@@ -20,12 +20,12 @@ public class SleepTrackerAppTest {
 
     @BeforeAll
     static void beforeAll() {
-        s1 = new SleepSession("02.10.25 01:15;02.10.25 09:30;GOOD"); //сова
-        s2 = new SleepSession("02.10.25 23:50;03.10.25 08:05;NORMAL"); //голубь
-        s3 = new SleepSession("03.10.25 23:10;04.10.25 00:00;NORMAL"); //голубь
+        s1 = new SleepSession("02.10.25 01:15;02.10.25 09:30;GOOD");
+        s2 = new SleepSession("02.10.25 23:50;03.10.25 08:05;NORMAL");
+        s3 = new SleepSession("03.10.25 23:10;04.10.25 00:00;NORMAL");
         s6 = new SleepSession("05.10.25 06:00;06.10.25 10:00;BAD");
-        s4 = new SleepSession("29.10.25 23:40;30.10.25 10:00;BAD"); //сова
-        s5 = new SleepSession("31.10.25 21:10;01.11.25 06:20;BAD"); //жаворонок
+        s4 = new SleepSession("29.10.25 23:40;30.10.25 10:00;BAD");
+        s5 = new SleepSession("31.10.25 21:10;01.11.25 06:20;BAD");
     }
 
     @Test
